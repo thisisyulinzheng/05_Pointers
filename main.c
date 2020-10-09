@@ -66,7 +66,7 @@ int main() {
 	printf("Part 9\n");
 	int ct;
 	for (ct = 0; ct < 4; ct++) {
-		printf("Byte %d in decimal: %hhu | in hex: %hhx \n", ct, *(u_ip+ct), *(u_ip+ct));
+		printf("Byte %d in decimal: %hhu | in hex: %hhx \n", ct, *(c_ip+ct), *(c_ip+ct));
 	}
 
 	printf("\n");
@@ -75,8 +75,8 @@ int main() {
 	
 	printf("Part 10\n");
 	for(ct = 0; ct < 4; ct++) {
-        *(u_ip + ct) += 1;
-        printf("Byte %d incremented, in decimal: %hhu | in hex:%hhx\n", ct, *(u_ip+ct), *(u_ip+ct));
+        *(c_ip + ct) += 1;
+        printf("Byte %d incremented by 1, in decimal: %hhu | in hex:%hhx\n", ct, *(c_ip+ct), *(c_ip+ct));
     }
 	printf("\n");
 
@@ -84,9 +84,10 @@ int main() {
 	
 	printf("Part 11\n");
 	for(ct = 0; ct < 4; ct++) {
-        u_ip[ct] += 16;
-        printf("Byte %d incremented, in decimal: %hhu | in hex:%hhx\n", ct, *(u_ip+ct), *(u_ip+ct));
+       *(c_ip + ct) += 16;
+       printf("Byte %d incremented by 16, in decimal: %hhu | in hex:%hhx\n", ct, *(c_ip+ct), *(c_ip+ct));
     }	
+	printf("\n");
 	printf("\n");
 
 	return 0;
