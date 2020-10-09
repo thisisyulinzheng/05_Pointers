@@ -74,15 +74,19 @@ int main() {
 	//10
 	
 	printf("Part 10\n");
-	*(u_ip+1) += 1;
-	printf("%d\n", *(u_ip+1));
+	for(ct = 0; ct < 4; ct++) {
+        *(u_ip + ct) += 1;
+        printf("Byte %d incremented, in decimal: %hhu | in hex:%hhx\n", ct, *(u_ip+ct), *(u_ip+ct));
+    }
 	printf("\n");
-	for (ct = 0; ct < 4; ct++) {
-		//printf("%d\n", ct);
-	 	*(u_ip+ct) += 1;
-		printf("%d\n", ct);
-	}
 
+	//11
+	
+	printf("Part 11\n");
+	for(ct = 0; ct < 4; ct++) {
+        u_ip[ct] += 16;
+        printf("Byte %d incremented, in decimal: %hhu | in hex:%hhx\n", ct, *(u_ip+ct), *(u_ip+ct));
+    }	
 	printf("\n");
 
 	return 0;
